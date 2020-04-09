@@ -17,7 +17,7 @@ if (isset($_GET['controller'])) {
 			}
 		}
 		else{
-			echo "<p>No ha seleccionado un metodo</p>";
+			echo "<p>No ha seleccionado un metodo valido</p>";
 		}
 	}
 	else{

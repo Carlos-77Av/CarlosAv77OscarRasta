@@ -1,0 +1,54 @@
+*{
+	margin: 10px;
+	padding: 10px;
+}
+
+body {
+	
+	background: rgb(143, 148, 156);
+
+}
+
+/*HEAD */
+
+header{
+	color: black;
+	text-align: center;
+	text-decoration: underline;
+	padding: 5px 10px;
+}
+ 
+ #principal {
+ 	background: rgba(0,0,0,0.7);
+ 	border: 1px solid #000;
+ 	height: 890px;
+ }
+
+ #principal {
+	width: 1000px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin: auto;
+	padding: 20px;
+	background: rgba(0,0,0,0.4);
+	border-radius: 10px;
+	box-shadow: 0px 0px 1px #fff;
+}
+
+#banner{
+	width: 950px;
+	margin-bottom: 0px;
+	background: rgba( 81, 243, 253);
+	margin: auto;
+	border-radius: 15px;
+	margin-top: 25px;
+	margin-left: 5px;
+	padding: 5px;
+	border: 1px solid #fff;
+
+}
+
+#banner img{
+	width: 920px;
+	height: 200px;
+}
