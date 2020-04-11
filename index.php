@@ -1,6 +1,6 @@
 
 <?php
-
+/*
 require_once 'autoload.php';
 
 if (isset($_GET['controller'])) {
@@ -27,3 +27,10 @@ if (isset($_GET['controller'])) {
 else{
 	echo "<p>El controlador no ha sido enviado</p>";
 }
+
+*/
+
+require_once 'config/conexion/Conexion.php';
+
+$conexion = new Conexion();
+$conexion->conectar();
