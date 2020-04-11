@@ -45,10 +45,9 @@ class Conexion{
 			$url = "{$CONTROLADOR}:host={$SERVIDOR};"
 			. "dbname = {$DATA_BASE}; charset={$CODIFICACION}";
 			//Se crea la codificacion
-			$this->conexion = new PDO($url, $USUARIO, $CLAVE);
-			echo "Conectado";
+			return $this->conexion = new PDO($url, $USUARIO, $CLAVE);
 		} catch (Exception $e) {
-			echo "Mierda";
+			echo "Erros al conectarse con la Base de Datos: ";
 			echo $e->getTraceAsString();
 		}
 	}

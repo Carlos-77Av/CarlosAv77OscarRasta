@@ -31,6 +31,8 @@ else{
 */
 
 require_once 'config/conexion/Conexion.php';
+require_once 'config/persistencia/crud.php';
 
-$conexion = new Conexion();
-$conexion->conectar();
+$crud = new Crud("categorias");
+$lista = $crud->get();
+var_dump($lista);
