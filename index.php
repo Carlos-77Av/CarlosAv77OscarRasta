@@ -35,4 +35,6 @@ require_once 'config/persistencia/crud.php';
 
 $crud = new Crud("categorias");
 $lista = $crud->get();
+echo "<pre>";
 var_dump($lista);
+echo "</pre>";

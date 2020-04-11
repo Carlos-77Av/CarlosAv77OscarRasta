@@ -7,7 +7,7 @@ class Conexion{
 		"driver" => "mysql",
 		"host" => "localhost",
 		"database" => "tienda", 
-		"port" => "80",
+		"port" => "3306",
 		"username" => "root",
 		"password" => "",
 		"charset" => "utf8mb4"
@@ -42,13 +42,15 @@ class Conexion{
 
 			*/
 
-			$url = "{$CONTROLADOR}:host={$SERVIDOR};"
-			. "dbname = {$DATA_BASE}; charset={$CODIFICACION}";
-			//Se crea la codificacion
-			return $this->conexion = new PDO($url, $USUARIO, $CLAVE);
-		} catch (Exception $e) {
-			echo "Erros al conectarse con la Base de Datos: ";
-			echo $e->getTraceAsString();
-		}
-	}
+            $url = "{$CONTROLADOR}:host={$SERVIDOR}:{$PUERTO};". 
+            "dbname={$DATA_BASE};charset={$CODIFICACION}";
+            //Se crea la conexión.
+            $this->conexion = new PDO($url, $USUARIO, $CLAVE);
+            return $this->conexion;
+        } catch (Exception $e) {
+            echo "NO SE PUDO CONECTAR";
+            echo $e->getTraceAsString();
+        }
+    }
+
 }
