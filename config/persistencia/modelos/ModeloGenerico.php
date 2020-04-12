@@ -23,7 +23,7 @@ class ModeloGenerico extends Crud{
 		$max = count($variables);
 		foreach ($variables as $llave => $valor) {
 			if (!in_array($llave, $this->excluir)) {
-				$atributos = $llave;
+				$atributos[] = $llave;
 			}
 		}
 		return $atributos;
@@ -45,10 +45,11 @@ class ModeloGenerico extends Crud{
 			}
 			//Corregir el objeto que recibimos con los atributos del modelo.
 			foreach ($atributos as $indice => $llave) {
-				if (isset($obj[$llave])) {
-					$objetoFinal[$llave] = $obj[$llave];
+				if (isset($this->{$llave})) {
+					$objetoFinal[$llave] = $this->{$llave};
 				}
 			}
+			return $objetoFinal;
 		} catch (Exception $e) {
 			throw new Exception("Error en ". $this->className . ".parsear() => " . $e->getMessage());
 			
