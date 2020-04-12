@@ -34,6 +34,19 @@ require_once 'config/conexion/Conexion.php';
 require_once 'config/persistencia/crud.php';
 
 $crud = new Crud("categorias");
+
+
+
+/*-----------	INSERT FUCNIONAL ESTA COMENTADO PARA NO HACER INSERCIONES INNECESARIAS	------------*/
+
+/*
+$crud->insert([
+	"categoria" => "Limpieza",
+	"user_cre" => "Davinchi",
+	"fecha_crea" => "2020-04-11"
+]);
+*/
+
 $lista = $crud->get();
 echo "<pre>";
 var_dump($lista);
